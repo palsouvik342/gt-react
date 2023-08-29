@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+:root{
+  --theme-color:#b19777;
+  --paragraph-color:#eee;
+  --bg-gray: #f8f4f3;
+}
+a{text-decoration: none; color: unset;}
+body{font-family: 'Playfair Display', serif;}
+body,html{overflow-x: hidden;}
+
+.navbar-nav .nav-item .nav-link{font-weight: 600; color: #fff;}
+.navbar-nav .nav-item{padding: 10px 10px;}
+.navbar_section{position: absolute; z-index: 99; width: 100%;}
+
+.hero_slider_section .custom_carousel_item{height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: -2; padding: 0 300px ;}
+.hero_slider_section .custom_carousel_item .carousel_overlay{position: absolute; top: 0; left: 0; bottom: 0; right: 0; background-color: rgba(0,0,0,0.6); z-index: -1;}
+
+.hero_slider_section .custom_carousel_item h2{text-align: center;font-size: 70px; color: #fff; font-weight: 700;}
+.hero_slider_section .custom_carousel_item p{ text-align: center;font-size: 18px; font-weight: 200; color: #fff; margin: 10px 0; line-height: 30px; letter-spacing: 1px;}
+.hero_slider_section .custom_carousel_item a{ font-size: 18px; font-weight: 200; color: #fff; margin: 30px 0; background-color: var(--theme-color); padding: 10px 20px; text-transform: uppercase; color: #fff; font-family: 'Teko', serif; letter-spacing: 3px; border: 1px solid var(--theme-color); transition: all 0.4s;}
+.hero_slider_section .custom_carousel_item a:hover{background-color: transparent; transition: all 0.4s linear;}
+
+.section_title h5{ font-size: 16px; font-family: 'Teko', serif; color: var(--theme-color); font-weight: 100; text-transform: uppercase; letter-spacing: 3px; text-align: center;}
+.section_title h2{text-align: center;}
+
+.services_Section{padding: 80px 0; background-color: var(--bg-gray);}
+.services_Section .single_services{background-color: #fff; padding: 20px; /*background-image: url("uploads/services_bg.jpg");*/ background-blend-mode:overlay; background-size: cover; background-repeat: no-repeat;}
+.services_Section .single_services:hover{background-blend-mode: unset; }
+.single_services_txt h3,p{color: #000;}
+.services_Section .single_services:hover .single_services_txt h3,.services_Section .single_services:hover .single_services_txt p{color: #fff;}
+.services_Section .single_services .single_services_txt{padding: 20px 0 ;}
+.services_Section .single_services .single_services_btn a{color: var(--theme-color); font-family:'Teko', serif; font-weight: 100; font-size: 17px; letter-spacing: 3px;}
+
+.our_portfolio{background-color: #252531; padding: 70px 0;}
+.our_portfolio .section_title{padding-bottom: 40px;}
+.our_portfolio .single_portfolio_item .single_portfolio_item_txt{padding: 20px 0;}
+.our_portfolio .single_portfolio_item .single_portfolio_item_txt p{ font-family: 'Teko', serif; color: var(--theme-color); font-weight: 200; letter-spacing: 1px; text-transform: uppercase; margin: 0; padding-bottom: 5px;}
+.our_portfolio .single_portfolio_item .single_portfolio_item_txt h2{color: #fff; font-size: 25px; letter-spacing: 1px;}
+
+.gallery_section{padding: 80px 0; background-color: var(--bg-gray);}
+.gallery_section .section_title{padding-bottom: 40px;}
+.gallery_section .single_gallery_img img{transition: all 0.5s ;}
+.gallery_section .single_gallery_img:hover img{transform: scale(1.3); transition: all 0.8s linear;}
+.gallery_section .single_gallery_img{overflow: hidden; margin: 12px 0;}
+
+.contact_section{padding: 70px 0;}
+.contact_section .contact_form{display: flex; flex-direction: column; justify-content: center; height: 100%;}
+.contact_section .contact_form .single-form-row input, textarea{width: 100%; padding: 15px; background-color: #f7f7f7; border: unset;}
+.contact_section .contact_form .single-form-row input:focus{border: unset; outline: none;}
+.contact_section .contact_form .single-form-row textarea:focus{border: unset; outline: none;}
+.contact_section .contact_form .single-form-row{padding: 10px 0;}
+.contact_section .contact_form .single-form-row .form_submit_btn{background-color: var(--theme-color); border: 1px solid var(--theme-color); font-family: 'Teko', serif; font-size: 17px; text-transform: uppercase; letter-spacing: 2px; color: #fff; padding: 8px 20px; transition: all 0.3s }
+.contact_section .contact_form .single-form-row .form_submit_btn:hover{background-color: transparent; color: var(--theme-color); transition: all 0.3s linear;}
+
+footer.footer_section{padding: 80px 0; background-color: #252531; }
+footer.footer_section .footer_About p{ color: #fff; font-size: 13px; margin-top: 18px; padding-right: 28px;}
+footer.footer_section  .social_icons .single_social_icon i{color: #fff; transition: all 0.3s ;}
+footer.footer_section  .social_icons .single_social_icon{height: 40px; width: 40px; border: 1px solid #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ;}
+footer.footer_section  .social_icons{display: flex; gap: 10px; padding-top: 10px;}
+footer.footer_section  .social_icons .single_social_icon:hover{border-color: var(--theme-color); transition: all 0.3s linear;}
+footer.footer_section  .social_icons .single_social_icon:hover i{color: var(--theme-color); transition: all 0.3s linear;}
+footer.footer_section .footer_title h5{color: var(--theme-color); font-size: 15px; font-weight: 400; letter-spacing: 1px;}
+footer.footer_section .footer_content{padding-top: 20px;}
+footer.footer_section .footer_content ul li{color: #fff; text-transform: capitalize; letter-spacing: 0.8px; padding: 3px 0;}
+footer.footer_section .footer_content ul li i{color: var(--theme-color);}
+footer.footer_section .footer_content ul{list-style-type: none; padding: 0;}
+
+.owl-carousel{display: block;}
+
+@media only screen and (max-width: 480px)
+{
+  .hero_slider_section .custom_carousel_item h2{font-size: 32px;}
+  .hero_slider_section .custom_carousel_item{padding: 0 30px;}
+  .hero_slider_section .custom_carousel_item p{font-size: 13px;}
+  .navbar-collapse{background-color: #fff;}
+  .navbar-nav .nav-item .nav-link{color: #000;}
+
+  .services_Section{padding: 80px 0 20px;}
+  .services_Section .single_services{margin: 10px 0;}
+  .services_Section .single_services .single_services_icon{text-align: center;}
+  .services_Section .single_services .single_services_txt{text-align: center;}
+  .services_Section .single_services .single_services_btn{text-align: center;}
+
+  .contact_section .contact_form form .single-form-row:last-child{display: flex; justify-content: center;}
+  footer.footer_section .footer_title{padding: 10px 0; margin-top: 20px;}
+  footer.footer_section .footer_content{padding-top: 0!important;}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.cls-1{fill:none;stroke:#b19777;stroke-linejoin:round;stroke-width:2px;}
